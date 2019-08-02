@@ -44,5 +44,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cin979/Angular_Wk-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cin979/Angular_Wk-4/issues"
+  },
+  "homepage": "https://github.com/cin979/Angular_Wk-4#readme",
+  "description": ""
 }
