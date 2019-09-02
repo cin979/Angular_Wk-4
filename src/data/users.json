@@ -1,0 +1,28 @@
+{
+  "users" : [
+    {
+      "username" : "usr1",
+      "password" : "pass1",
+      "birthDate" : "1-1-1999",
+      "age" : 20,
+      "email" : "usr1@gmail.com"
+    },
+
+    {
+      "username" : "usr2",
+      "password" : "pass2",
+      "birthDate" : "12-12-2001",
+      "age" : 17,
+      "email" : "usr2@yahoo.com"
+    },
+
+    {
+      "username" : "usr3",
+      "password" : "pass3",
+      "birthDate" : "6-6-1992",
+      "age" : 27,
+      "email" : "usr3@hotmail.com"
+    }
+
+  ]
+}

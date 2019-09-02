@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import * as data from '../../data/users.json';
 
 @Component({
   selector: 'app-login',
@@ -7,30 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LoginComponent implements OnInit {
-  username = ["usr1", "usr2", "usr3"];
-  password = ["pass1", "pass2", "pass3"];
+  givenUser:string;
+  givenPass:string;
 
-  givenUser:string = "";
-  givenPass:string = "";
-
-  constructor() {
-
-  };
+  constructor(private router:Router) { };
 
   login() {
-    var user = this.username.indexOf(this.givenUser)
+    var userList = data.users;
+    var user = -1;
+    for (var i=0; i < userList.length; i++){
+      if (userList[i].username === this.givenUser){
+        user = i;
+      }
+    }
     if (user != -1){
-      if (this.password.indexOf(this.givenPass) === user){
-        alert("/src/app/account/"+this.username[user]+".html");
+      if (userList[user].password === this.givenPass){
+        this.router.navigateByUrl('/account');
       } else {
-        alert("Password Incorrect");
+        console.log("badPass for " + userList[user].username);
+        return "badPass";
       }
     } else {
-      if (this.givenUser != "") {
-        alert("Incorrect Username");
-      } else {
-        alert("Please Enter Username");
-      }
+      console.log("badUsr");
+      return "badUsr";
     }
   };
 

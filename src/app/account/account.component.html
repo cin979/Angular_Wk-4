@@ -1,1 +1,22 @@
-<h1>Account</h1>
+<h1>Accounts Page</h1>
+<img class="images" src="assets/images/rounded-512.png" width="64px" height="64px">
+<body>
+  <script>
+    if(typeOf(Storage) !== "undefined"){
+      if(sessionStorage.currentUser){
+        var currentUser = JSON.parse(sessionStorage.currentUser);
+        document.getElementById("username").innerHTML = currentUser[username];
+        document.getElementById("birth_day").innerHTML = currentUser[birthDate];
+        document.getElementById("age").innerHTML = currentUser[age];
+        document.getElementById("email").innerHTML = currentUser[email];
+      }
+    } else {
+      document.getElementById("success").innerHTML = "Please enable / use a Browser with support for web storage";
+    }
+  </script>
+  <div id="success"></div>
+  <div id="username"></div>
+  <div id="birth_day"></div>
+  <div id="age"></div>
+  <div id="email"></div>
+</body>
