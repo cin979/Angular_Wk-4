@@ -1,22 +1,25 @@
-<h1>Accounts Page</h1>
-<img class="images" src="assets/images/rounded-512.png" width="64px" height="64px">
-<body>
-  <script>
-    if(typeOf(Storage) !== "undefined"){
-      if(sessionStorage.currentUser){
-        var currentUser = JSON.parse(sessionStorage.currentUser);
-        document.getElementById("username").innerHTML = currentUser[username];
-        document.getElementById("birth_day").innerHTML = currentUser[birthDate];
-        document.getElementById("age").innerHTML = currentUser[age];
-        document.getElementById("email").innerHTML = currentUser[email];
-      }
-    } else {
-      document.getElementById("success").innerHTML = "Please enable / use a Browser with support for web storage";
-    }
-  </script>
-  <div id="success"></div>
-  <div id="username"></div>
-  <div id="birth_day"></div>
-  <div id="age"></div>
-  <div id="email"></div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <h1>
+    <img class="images" src="assets/images/rounded-512.png" width="64px" height="64px">
+    Accounts Page
+  </h1>
+  <body>
+    <nav id="login" class="btn btn-outline-secondary nav-link" routerLink="/login" style="display:block">Please Login Here</nav>
+    <button id="logout" class="btn btn-outline-secondary" type="button" (click)="logout()" style="display:none">Logout</button>
+    <p style="text-align:justify">
+      <span id="username_head" style="display:none">Username: </span>
+      <span id="username" style="display:block"></span>
+      <span id="birth_day_head" style="display:none">Date of Birth: </span>
+      <span id="birth_day" style="display:block"></span>
+      <span id="age_head" style="display:none">Age: </span>
+      <span id="age" style="display:block"></span>
+      <span id="email_head" style="display:none">Email: </span>
+      <span id="email" style="display:block"></span>
+    </p>
+  </body>
+</html>

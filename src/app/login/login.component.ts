@@ -24,14 +24,15 @@ export class LoginComponent implements OnInit {
     }
     if (user != -1){
       if (userList[user].password === this.givenPass){
+        sessionStorage.setItem("currentUser", JSON.stringify(userList[user]));
         this.router.navigateByUrl('/account');
       } else {
         console.log("badPass for " + userList[user].username);
-        return "badPass";
+        alert("Incorrect Login")
       }
     } else {
       console.log("badUsr");
-      return "badUsr";
+      alert("Incorrect Login")
     }
   };
 

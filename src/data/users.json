@@ -23,6 +23,20 @@
       "age" : 27,
       "email" : "usr3@hotmail.com"
     }
+  ],
 
+  "groups" : [
+    {
+      "groupName" : "S_Admin",
+      "user_IDs" : [ 0 ]
+    },
+    {
+      "groupName" : "G_Admin",
+      "user_IDs" : [ 2 ]
+    },
+    {
+      "groupName" : "G_Assis",
+      "user_IDs" : [ 1 ]
+    }
   ]
 }

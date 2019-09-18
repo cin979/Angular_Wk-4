@@ -12,5 +12,3 @@ function userAuth(username, password) {
     }
   }
 }
-// console.log(data.users[0].username + " 1\n" + data.users[1].username + " 2\n" + data.users[2].username + " 3\n");
-userAuth("usr1", "pass1");
